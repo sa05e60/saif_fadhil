@@ -10,7 +10,7 @@ interface Props {
 
 const ProjectCard = ({ src, title, description, link }: Props) => {
     return (
-        <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#3D0C11]">
+        <div className="rounded-lg shadow-lg border border-[#3D0C11] overflow-hidden">
             <Image
                 src={src}
                 alt={title}
@@ -19,7 +19,7 @@ const ProjectCard = ({ src, title, description, link }: Props) => {
                 className="w-full object-contain"
             />
 
-            <div className="relative p-4">
+            <div className="p-4">
                 <h1 className="text-2xl font-semibold text-white">{title}</h1>
                 <p className="mt-2 text-gray-300">{description}</p>
                 {link && (
@@ -27,7 +27,8 @@ const ProjectCard = ({ src, title, description, link }: Props) => {
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block mt-4 px-5 py-2 rounded-lg button-primary text-white text-sm font-medium"
+                        className="relative z-10 inline-block mt-4 px-5 py-2 rounded-lg button-primary text-white text-sm font-medium cursor-pointer"
+                        onClick={(e) => { e.stopPropagation(); window.open(link, '_blank'); }}
                     >
                         Visit Project →
                     </a>
