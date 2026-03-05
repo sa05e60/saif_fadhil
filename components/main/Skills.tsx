@@ -12,8 +12,13 @@ import SkillText from "../sub/SkillText";
 import { InView } from "react-intersection-observer";
 import { slideInFromLeft, slideInFromRight } from "@/utils/motion";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
 
 const Skills = () => {
+    const { lang } = useLanguage();
+    const t = translations[lang].skills;
+    const isAr = lang === "ar";
     return (
         <section
             id="skills"
@@ -33,8 +38,8 @@ const Skills = () => {
                                     variants={slideInFromLeft(0.5)}
                                     className="rounded-md text-[white] w-full my-auto py-[8px] px-[10px] border border-[#3D0C11] opacity-[0.9]"
                                 >
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429] text-2xl font-bold">
-                                        Frontend{" "}
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429] text-2xl font-bold" style={isAr ? { fontFamily: "var(--font-cairo)" } : {}}>
+                                        {t.frontend}{" "}
                                     </span>
                                     <br />
                                     <div className="flex flex-row justify-around flex-wrap my-4 gap-5 items-center">
@@ -62,8 +67,8 @@ const Skills = () => {
                                     variants={slideInFromRight(0.5)}
                                     className="rounded-md text-[white] w-full h-full py-[8px] px-[10px] border border-[#3D0C11] opacity-[0.9]"
                                 >
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429] text-2xl font-bold">
-                                        Backend & Languages{" "}
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429] text-2xl font-bold" style={isAr ? { fontFamily: "var(--font-cairo)" } : {}}>
+                                        {t.backend}{" "}
                                     </span>
                                     <br />
                                     <div className="flex flex-row justify-around flex-wrap my-4 gap-5 items-center">
@@ -93,8 +98,8 @@ const Skills = () => {
                                     variants={slideInFromLeft(0.5)}
                                     className="rounded-md text-[white] w-full my-auto py-[8px] px-[10px] border border-[#3D0C11] opacity-[0.9]"
                                 >
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429] text-2xl font-bold">
-                                        Dev Tools{" "}
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429] text-2xl font-bold" style={isAr ? { fontFamily: "var(--font-cairo)" } : {}}>
+                                        {t.devtools}{" "}
                                     </span>
                                     <br />
                                     <div className="flex flex-row justify-around flex-wrap my-4 gap-5 items-center">
@@ -122,8 +127,8 @@ const Skills = () => {
                                     variants={slideInFromRight(0.5)}
                                     className="rounded-md text-[white] w-full h-full py-[8px] px-[10px] border border-[#3D0C11] opacity-[0.9]"
                                 >
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429] text-2xl font-bold">
-                                        Security{" "}
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429] text-2xl font-bold" style={isAr ? { fontFamily: "var(--font-cairo)" } : {}}>
+                                        {t.security}{" "}
                                     </span>
                                     <br />
                                     <div className="flex flex-row justify-around flex-wrap my-4 gap-3 items-center">

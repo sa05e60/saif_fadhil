@@ -4,9 +4,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { slideInFromBottom, slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
 import { InView } from "react-intersection-observer";
 
 const About = () => {
+    const { lang } = useLanguage();
+    const t = translations[lang].about;
+    const isAr = lang === "ar";
+    const arFont = isAr ? { fontFamily: "var(--font-cairo)" } : {};
     return (
         <section
             id="about"
@@ -21,11 +27,11 @@ const About = () => {
                             animate={inView ? "visible" : "hidden"}
                             variants={slideInFromTop}
                             className="text-[40px] pt-[5rem] pb-3 md:p-0 font-medium text-center text-gray-200 z-50"
+                            style={arFont}
                         >
-                            About
+                            {t.title}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429]">
-                                {" "}
-                                Me{" "}
+                                {t.titleGradient}
                             </span>
                         </motion.div>
                     )}
@@ -72,19 +78,16 @@ const About = () => {
                             variants={slideInFromBottom}
                             className="Welcome-box px-[15px] w-[90%] md:w-3/4 py-[8px] z-[20] brder mb-[20px] border-[#3D0C11] opacity-[0.9]"
                         >
-                            <h1 className="Welcome-text text-[19px] w-full text-center" style={{ fontFamily: "var(--font-space-grotesk)", letterSpacing: "0.01em", lineHeight: "1.75" }}>
-                                Cybersecurity student & web security researcher specializing in offensive testing,
-                                and a frontend developer who builds clean, responsive web applications.
-                                Active CTF player and security researcher passionate about discovering
-                                vulnerabilities and bridging the gap between development and security.
+                            <h1 className="Welcome-text text-[19px] w-full text-center" style={{ fontFamily: isAr ? "var(--font-cairo)" : "var(--font-space-grotesk)", letterSpacing: "0.01em", lineHeight: "1.75" }}>
+                                {t.bio}
                             </h1>
                         </motion.div>
                     )}
                 </InView>
             </div>
             <div className="relative z-[20] mt-6 md:mt-0 md:absolute md:bottom-[10px] px-[5px] pb-8 md:pb-0">
-                <div className="cursive text-[20px] font-medium text-center text-gray-300">
-                    Securing the Web, One Line at a Time
+                <div className="cursive text-[20px] font-medium text-center text-gray-300" style={arFont}>
+                    {t.tagline}
                 </div>
             </div>
 

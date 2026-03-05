@@ -2,9 +2,13 @@
 import { Socials } from "@/constants";
 import Image from "next/image";
 import React, { useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { lang, toggleLang } = useLanguage();
+    const t = translations[lang].navbar;
 
     return (
         <div className="w-full fixed top-0 shadow-lg shadow-[#680000]/50 bg-[#0A050517] backdrop-blur-md z-50 px-10 m-0 max-w-[1855px] rounded-full">
@@ -29,13 +33,13 @@ const Navbar = () => {
                 <div className="hidden w-auto lg:w-1/3 h-full md:flex flex-row items-center justify-between md:mx-4 lg:mx-auto lg:pr-12">
                     <div className="flex items-center justify-between gap-4 md:gap-3 lg:gap-6 w-full h-auto border border-[#3D0C1161] bg-[#170A0B5e] mr-[15px] px-[14px] md:px-[16px] lg:px-[20px] py-[10px] rounded-full text-gray-200 text-sm md:text-sm lg:text-base whitespace-nowrap">
                         <a href="#about" className="cursor-pointer">
-                            About me
+                            {t.about}
                         </a>
                         <a href="#skills" className="cursor-pointer">
-                            Skills
+                            {t.skills}
                         </a>
                         <a href="#projects" className="cursor-pointer">
-                            Projects
+                            {t.projects}
                         </a>
                     </div>
                 </div>
@@ -59,6 +63,15 @@ const Navbar = () => {
                         </a>
                     ))}
 
+                    {/* Language toggle */}
+                    <button
+                        onClick={toggleLang}
+                        className="text-sm font-bold px-3 py-1 rounded-full border border-[#3D0C11] text-gray-200 bg-[#170A0B5e] hover:bg-[#3D0C11] transition-colors"
+                        style={{ fontFamily: lang === "ar" ? "var(--font-cairo)" : undefined }}
+                    >
+                        {lang === "en" ? "عربي" : "EN"}
+                    </button>
+
                     {/* Hamburger — mobile only */}
                     <button
                         className="md:hidden flex flex-col gap-[5px] justify-center items-center w-8 h-8"
@@ -75,9 +88,9 @@ const Navbar = () => {
             {/* Mobile dropdown */}
             {menuOpen && (
                 <div className="md:hidden w-full bg-[#0A0505ee] backdrop-blur-md border-t border-[#3D0C11] flex flex-col items-center gap-5 py-6 rounded-b-2xl">
-                    <a href="#about" className="text-gray-200 text-lg cursor-pointer" onClick={() => setMenuOpen(false)}>About me</a>
-                    <a href="#skills" className="text-gray-200 text-lg cursor-pointer" onClick={() => setMenuOpen(false)}>Skills</a>
-                    <a href="#projects" className="text-gray-200 text-lg cursor-pointer" onClick={() => setMenuOpen(false)}>Projects</a>
+                    <a href="#about" className="text-gray-200 text-lg cursor-pointer" onClick={() => setMenuOpen(false)}>{t.about}</a>
+                    <a href="#skills" className="text-gray-200 text-lg cursor-pointer" onClick={() => setMenuOpen(false)}>{t.skills}</a>
+                    <a href="#projects" className="text-gray-200 text-lg cursor-pointer" onClick={() => setMenuOpen(false)}>{t.projects}</a>
                 </div>
             )}
         </div>

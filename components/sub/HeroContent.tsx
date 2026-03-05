@@ -10,8 +10,13 @@ import {
 import { BsStars } from "react-icons/bs";
 import Image from "next/image";
 import { InView } from "react-intersection-observer";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
 
 const HeroContent = () => {
+    const { lang } = useLanguage();
+    const t = translations[lang].hero;
+    const isAr = lang === "ar";
     return (
         <InView triggerOnce={false}>
             {({ inView, ref }) => (
@@ -33,8 +38,8 @@ const HeroContent = () => {
                                         className="Welcome-box py-[8px] px-[7px] border border-[#3D0C11] opacity-[0.9]"
                                     >
                                         <BsStars className="text-[#D90429] mr-[10px] h-5 w-5" />
-                                        <h1 className="Welcome-text text-[13px]">
-                                            Cybersecurity Student & Web Security Researcher
+                                        <h1 className="Welcome-text text-[13px]" style={isAr ? { fontFamily: "var(--font-cairo)" } : {}}>
+                                            {t.badge1}
                                         </h1>
                                     </motion.div>
                                 )}
@@ -50,8 +55,8 @@ const HeroContent = () => {
                                         className="Welcome-box py-[8px] px-[7px] border border-[#3D0C11] opacity-[0.9]"
                                     >
                                         <BsStars className="text-[#D90429] mr-[10px] h-5 w-5" />
-                                        <h1 className="Welcome-text text-[13px]">
-                                            Front-end Developer
+                                        <h1 className="Welcome-text text-[13px]" style={isAr ? { fontFamily: "var(--font-cairo)" } : {}}>
+                                            {t.badge2}
                                         </h1>
                                     </motion.div>
                                 )}
@@ -66,8 +71,8 @@ const HeroContent = () => {
                                         className="Welcome-box py-[8px] px-[7px] border border-[#3D0C11] opacity-[0.9]"
                                     >
                                         <BsStars className="text-[#D90429] mr-[10px] h-5 w-5" />
-                                        <h1 className="Welcome-text text-[13px]">
-                                            Web Security Specialist
+                                        <h1 className="Welcome-text text-[13px]" style={isAr ? { fontFamily: "var(--font-cairo)" } : {}}>
+                                            {t.badge3}
                                         </h1>
                                     </motion.div>
                                 )}
@@ -82,17 +87,18 @@ const HeroContent = () => {
                                     animate={inView ? "visible" : "hidden"}
                                     variants={slideInFromLeft(0.5)}
                                     className="flex flex-col gap-6 mt-6 text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-white max-w-[600px] w-auto h-auto z-20"
+                                    style={isAr ? { fontFamily: "var(--font-cairo)" } : {}}
                                 >
                                     <span>
-                                        Developer by
+                                        {t.headline1}
                                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429]">
                                             {" "}
-                                            Craft.{" "}
+                                            {t.craft}{" "}
                                         </span>
-                                        Hacker by
+                                        {t.headline2}
                                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429]">
                                             {" "}
-                                            Curiosity.{" "}
+                                            {t.curiosity}{" "}
                                         </span>
                                     </span>
                                 </motion.div>
@@ -107,19 +113,12 @@ const HeroContent = () => {
                                     animate={inView ? "visible" : "hidden"}
                                     variants={slideInFromLeft(0.8)}
                                     className="text-sm md:text-md text-gray-400 my-5 max-w-[650px] z-30"
+                                    style={isAr ? { fontFamily: "var(--font-cairo)" } : {}}
                                 >
-                                    <li>
-                                        NCSE 2025 Finalist
-                                    </li>
-                                    <li>
-                                        HTB University Top 100
-                                    </li>
-                                    <li>
-                                        Security Platform Developer
-                                    </li>
-                                    <li>
-                                        Certified Ethical Hacker (Cisco)
-                                    </li>
+                                    <li>{t.achievement1}</li>
+                                    <li>{t.achievement2}</li>
+                                    <li>{t.achievement3}</li>
+                                    <li>{t.achievement4}</li>
                                 </motion.div>
                             )}
                         </InView>
@@ -132,8 +131,9 @@ const HeroContent = () => {
                                     href="#about"
                                     variants={slideInFromLeft(1)}
                                     className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] z-40"
+                                    style={isAr ? { fontFamily: "var(--font-cairo)" } : {}}
                                 >
-                                    Learn More!
+                                    {t.cta}
                                 </motion.a>
                             )}
                         </InView>
