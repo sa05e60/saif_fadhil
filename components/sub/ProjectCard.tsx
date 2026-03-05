@@ -27,8 +27,7 @@ const ProjectCard = ({ src, title, description, link }: Props) => {
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="relative z-10 inline-block mt-4 px-5 py-2 rounded-lg button-primary text-white text-sm font-medium cursor-pointer"
-                        onClick={(e) => { e.stopPropagation(); window.open(link, '_blank'); }}
+                        className="inline-block mt-4 text-[#D90429] underline underline-offset-4 hover:text-[#ff4d6d] text-sm font-medium transition-colors"
                     >
                         Visit Project →
                     </a>
