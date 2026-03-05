@@ -21,6 +21,7 @@ const Projects = () => {
                     src="/webrocker.png"
                     title="WebRocker"
                     description={t.webrockerDesc}
+                    link="https://webrocker.onrender.com/"
                 />
             </div>
         </div>

@@ -5,9 +5,10 @@ interface Props {
     src: string;
     title: string;
     description: string;
+    link?: string;
 }
 
-const ProjectCard = ({ src, title, description }: Props) => {
+const ProjectCard = ({ src, title, description, link }: Props) => {
     return (
         <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#3D0C11]">
             <Image
@@ -21,6 +22,16 @@ const ProjectCard = ({ src, title, description }: Props) => {
             <div className="relative p-4">
                 <h1 className="text-2xl font-semibold text-white">{title}</h1>
                 <p className="mt-2 text-gray-300">{description}</p>
+                {link && (
+                    <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-4 px-5 py-2 rounded-lg button-primary text-white text-sm font-medium"
+                    >
+                        Visit Project →
+                    </a>
+                )}
             </div>
         </div>
     );
