@@ -81,43 +81,38 @@ export const Skill_data = [
 
 export const Socials = [
     {
-        name: "Linkedin",
-        src: "/linkedin.svg",
-        link: "https://www.linkedin.com/in/jenin-joseph/",
-    },
-    {
         name: "Github",
         src: "/github.svg",
-        link: "https://github.com/Jenin82",
+        link: "https://github.com/sa05e60",
     },
     {
-        name: "MuLearn",
-        src: "/mulearn.svg",
-        link: "https://app.mulearn.org/profile/jeninjoseph@mulearn",
+        name: "Instagram",
+        src: "/instagram.svg",
+        link: "https://www.instagram.com/sa05_e60/",
     },
 ];
 
 export const Frontend_skill = [
     {
-        skill_name: "Html 5",
+        skill_name: "HTML 5",
         Image: "/html.png",
         width: 50,
         height: 50,
     },
     {
-        skill_name: "Css",
+        skill_name: "CSS 3",
         Image: "/css.png",
         width: 60,
         height: 60,
     },
     {
-        skill_name: "Java Script",
+        skill_name: "JavaScript",
         Image: "/js.png",
         width: 50,
         height: 50,
     },
     {
-        skill_name: "Tailwind Css",
+        skill_name: "Tailwind CSS",
         Image: "/tailwind.png",
         width: 60,
         height: 60,
@@ -128,76 +123,51 @@ export const Frontend_skill = [
         width: 55,
         height: 55,
     },
+];
+
+export const Backend_skill = [
     {
-        skill_name: "Type Script",
-        Image: "/ts.png",
+        skill_name: "Python",
+        Image: "/python.svg",
+        width: 55,
+        height: 55,
+    },
+    {
+        skill_name: "Flask",
+        Image: "/flask.svg",
         width: 50,
         height: 50,
     },
     {
-        skill_name: "Next js 13",
-        Image: "/next.png",
+        skill_name: "MySQL",
+        Image: "/mysql.png",
+        width: 55,
+        height: 55,
+    },
+    {
+        skill_name: "SQLite",
+        Image: "/sqlite.svg",
+        width: 50,
+        height: 50,
+    },
+    {
+        skill_name: "JWT / Auth",
+        Image: "/jwt.svg",
         width: 55,
         height: 55,
     },
 ];
 
-export const Backend_skill = [
-    {
-        skill_name: "Django",
-        Image: "/django.svg",
-        width: 60,
-        height: 60,
-    },
-
-    {
-        skill_name: "Postger SQL",
-        Image: "/postger.png",
-        width: 50,
-        height: 50,
-    },
-    {
-        skill_name: "My SQL",
-        Image: "/mysql.png",
-        width: 45,
-        height: 45,
-    },
-    {
-        skill_name: "Supabase",
-        Image: "/supabase.svg",
-        width: 40,
-        height: 40,
-    },
-    {
-        skill_name: "Fire base",
-        Image: "/Firebase.png",
-        width: 35,
-        height: 35,
-    },
-];
-
 export const DevTools = [
     {
-        skill_name: "GitHub",
+        skill_name: "Git",
         Image: "/gitwhite.png",
         width: 50,
         height: 50,
     },
     {
-        skill_name: "Vercel",
-        Image: "/vercel.svg",
-        width: 50,
-        height: 50,
-    },
-    {
-        skill_name: "Figma",
-        Image: "/figma.png",
-        width: 40,
-        height: 40,
-    },
-    {
-        skill_name: "Railway",
-        Image: "/railway.svg",
+        skill_name: "GitHub",
+        Image: "/github.svg",
         width: 50,
         height: 50,
     },
@@ -208,36 +178,26 @@ export const DevTools = [
         height: 50,
     },
     {
-        skill_name: "ChatGPT",
-        Image: "/chatgpt.svg",
+        skill_name: "Linux",
+        Image: "/linux.svg",
         width: 50,
         height: 50,
+    },
+    {
+        skill_name: "Figma",
+        Image: "/figma.png",
+        width: 45,
+        height: 45,
     },
 ];
 
-export const libraries = [
-    {
-        skill_name: "Framer Motion",
-        Image: "/framer.png",
-        width: 50,
-        height: 50,
-    },
-    {
-        skill_name: "React Icon",
-        Image: "/icons.svg",
-        width: 60,
-        height: 60,
-    },
-    {
-        skill_name: "JWT",
-        Image: "/jwt.svg",
-        width: 60,
-        height: 60,
-    },
-    {
-        skill_name: "ThreeJs",
-        Image: "/threejs.png",
-        width: 50,
-        height: 50,
-    },
+export const Security_skill = [
+    "Ethical Hacking",
+    "Network Security",
+    "Web App Security",
+    "Penetration Testing",
+    "Kali Linux",
+    "Burp Suite",
+    "Vulnerability Assessment",
 ];
+

@@ -21,7 +21,7 @@ const SkillText = () => {
                         className="text-[40px] pt-[5rem] pb-3 md:p-0 font-medium text-center text-gray-200 z-50"
                     >
                         My
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429]">
                             {" "}
                             Skills{" "}
                         </span>
@@ -38,7 +38,8 @@ const SkillText = () => {
                         variants={slideInFromLeft(0.5)}
                         className="cursive text-[20px] text-gray-200 mb-10 mt-[10px] text-center"
                     >
-                        Never miss a task, deadline or idea
+                        Security. Code.
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429]"> Dominate.</span>
                     </motion.div>
                 )}
             </InView>

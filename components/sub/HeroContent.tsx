@@ -19,7 +19,7 @@ const HeroContent = () => {
                     ref={ref}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
-                    className="flex md:flex-row flex-col-reverse items-center justify-center gap-10 md:gap-0 md:px-20 px-5 mt-40 w-full z-20"
+                    className="relative flex md:flex-row flex-col-reverse items-center justify-center gap-6 md:gap-0 md:px-20 px-5 mt-24 md:mt-40 w-full z-20"
                 >
                     <div className="h-full w-full md:w-3/6 flex flex-col gap-5 justify-center text-start">
                         <div className="hidden md:flex flex-row items-center md:gap-5 gap-1">
@@ -30,11 +30,11 @@ const HeroContent = () => {
                                         initial="hidden"
                                         animate={inView ? "visible" : "hidden"}
                                         variants={slideInFromTop}
-                                        className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+                                        className="Welcome-box py-[8px] px-[7px] border border-[#3D0C11] opacity-[0.9]"
                                     >
-                                        <BsStars className="text-[#b49bff] mr-[10px] h-5 w-5" />
+                                        <BsStars className="text-[#D90429] mr-[10px] h-5 w-5" />
                                         <h1 className="Welcome-text text-[13px]">
-                                            Fullstack Developer
+                                            Cybersecurity Student & Web Security Researcher
                                         </h1>
                                     </motion.div>
                                 )}
@@ -47,11 +47,11 @@ const HeroContent = () => {
                                         initial="hidden"
                                         animate={inView ? "visible" : "hidden"}
                                         variants={slideInFromTop}
-                                        className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+                                        className="Welcome-box py-[8px] px-[7px] border border-[#3D0C11] opacity-[0.9]"
                                     >
-                                        <BsStars className="text-[#b49bff] mr-[10px] h-5 w-5" />
+                                        <BsStars className="text-[#D90429] mr-[10px] h-5 w-5" />
                                         <h1 className="Welcome-text text-[13px]">
-                                            Tech Innovator
+                                            Front-end Developer
                                         </h1>
                                     </motion.div>
                                 )}
@@ -63,11 +63,11 @@ const HeroContent = () => {
                                         initial="hidden"
                                         animate={inView ? "visible" : "hidden"}
                                         variants={slideInFromTop}
-                                        className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+                                        className="Welcome-box py-[8px] px-[7px] border border-[#3D0C11] opacity-[0.9]"
                                     >
-                                        <BsStars className="text-[#b49bff] mr-[10px] h-5 w-5" />
+                                        <BsStars className="text-[#D90429] mr-[10px] h-5 w-5" />
                                         <h1 className="Welcome-text text-[13px]">
-                                            Team Lead
+                                            Web Security Specialist
                                         </h1>
                                     </motion.div>
                                 )}
@@ -81,20 +81,19 @@ const HeroContent = () => {
                                     initial="hidden"
                                     animate={inView ? "visible" : "hidden"}
                                     variants={slideInFromLeft(0.5)}
-                                    className="flex flex-col gap-6 mt-6 md:text-5xl text-4xl font-bold text-white max-w-[600px] w-auto h-auto z-20"
+                                    className="flex flex-col gap-6 mt-6 text-3xl sm:text-4xl md:text-5xl font-bold text-white max-w-[600px] w-auto h-auto z-20"
                                 >
                                     <span>
-                                        Coding
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+                                        Developer by
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429]">
                                             {" "}
-                                            Dreams{" "}
+                                            Craft.{" "}
                                         </span>
-                                        into
-                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+                                        Hacker by
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#680000] to-[#D90429]">
                                             {" "}
-                                            Reality{" "}
+                                            Curiosity.{" "}
                                         </span>
-                                        one line at a time
                                     </span>
                                 </motion.div>
                             )}
@@ -110,19 +109,16 @@ const HeroContent = () => {
                                     className="text-sm md:text-md text-gray-400 my-5 max-w-[650px] z-30"
                                 >
                                     <li>
-                                        Finalist in the Top 100 Coders Challenge
+                                        NCSE 2025 Finalist
                                     </li>
                                     <li>
-                                        Ranked within the Top 9,000 on
-                                        HackerRank
+                                        HTB University Top 100
                                     </li>
                                     <li>
-                                        Participated and Completed Hacktoberfest
-                                        2023
+                                        Security Platform Developer
                                     </li>
                                     <li>
-                                        Served as a Mentor in Multiple
-                                        Hackathons.
+                                        Certified Ethical Hacker (Cisco)
                                     </li>
                                 </motion.div>
                             )}
@@ -157,6 +153,7 @@ const HeroContent = () => {
                                     alt="work icons"
                                     height={650}
                                     width={650}
+                                    className="w-full max-w-[280px] sm:max-w-[380px] md:max-w-[500px] lg:max-w-[650px] h-auto"
                                 />
                             </motion.div>
                         )}
