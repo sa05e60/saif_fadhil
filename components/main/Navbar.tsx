@@ -41,6 +41,9 @@ const Navbar = () => {
                         <a href="#projects" className="cursor-pointer">
                             {t.projects}
                         </a>
+                        <a href="#contact" className="cursor-pointer">
+                            {t.contact}
+                        </a>
                     </div>
                 </div>
 
@@ -91,6 +94,7 @@ const Navbar = () => {
                     <a href="#about" className="text-gray-200 text-lg cursor-pointer" onClick={() => setMenuOpen(false)}>{t.about}</a>
                     <a href="#skills" className="text-gray-200 text-lg cursor-pointer" onClick={() => setMenuOpen(false)}>{t.skills}</a>
                     <a href="#projects" className="text-gray-200 text-lg cursor-pointer" onClick={() => setMenuOpen(false)}>{t.projects}</a>
+                    <a href="#contact" className="text-gray-200 text-lg cursor-pointer" onClick={() => setMenuOpen(false)}>{t.contact}</a>
                 </div>
             )}
         </div>

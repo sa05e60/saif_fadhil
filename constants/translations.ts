@@ -4,6 +4,7 @@ export const translations = {
             about: "About me",
             skills: "Skills",
             projects: "Projects",
+            contact: "Contact",
         },
         hero: {
             badge1: "Cybersecurity Student & Web Security Researcher",
@@ -39,12 +40,22 @@ export const translations = {
             title: "My Projects",
             webrockerDesc: "A professional web security analysis platform designed to identify vulnerabilities, analyze web targets, and assist security researchers in their assessments.",
         },
+        contact: {
+            title: "Get In",
+            titleGradient: " Touch",
+            subtitle: "Have a project or opportunity in mind? Let's connect.",
+            phone: "+964 771 924 7743",
+            email: "saiff7266@gmail.com",
+            phoneLabel: "Phone",
+            emailLabel: "Email",
+        },
     },
     ar: {
         navbar: {
             about: "عني",
             skills: "المهارات",
             projects: "المشاريع",
+            contact: "تواصل",
         },
         hero: {
             badge1: "طالب أمن سيبراني وباحث في أمن الويب",
@@ -79,6 +90,15 @@ export const translations = {
         projects: {
             title: "مشاريعي",
             webrockerDesc: "منصة احترافية لتحليل أمن الويب مصممة لاكتشاف الثغرات وتحليل الأهداف ومساعدة الباحثين الأمنيين في تقييماتهم.",
+        },
+        contact: {
+            title: "تواصل",
+            titleGradient: " معي",
+            subtitle: "لديك مشروع أو فرصة عمل؟ لنتواصل.",
+            phone: "‏+964 771 924 7743",
+            email: "saiff7266@gmail.com",
+            phoneLabel: "هاتف",
+            emailLabel: "بريد إلكتروني",
         },
     },
 };
