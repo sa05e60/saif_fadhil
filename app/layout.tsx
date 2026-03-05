@@ -11,8 +11,8 @@ const cairo = Cairo({ subsets: ["arabic", "latin"], variable: "--font-cairo" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", style: ["normal", "italic"] });
 
 export const metadata: Metadata = {
-    title: "Portfolio",
-    description: "My portfolio",
+    title: "Saif Fadhil | Portfolio",
+    description: "Cybersecurity student, web security researcher & frontend developer",
 };
 
 export default function RootLayout({
