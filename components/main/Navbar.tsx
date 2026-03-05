@@ -26,8 +26,8 @@ const Navbar = () => {
                     </span>
                 </a>
 
-                <div className="hidden w-3/6 lg:w-1/3 h-full md:flex flex-row items-center justify-between md:mx-auto lg:pr-12">
-                    <div className="flex items-center justify-between w-full h-auto border border-[#3D0C1161] bg-[#170A0B5e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
+                <div className="hidden w-auto lg:w-1/3 h-full md:flex flex-row items-center justify-between md:mx-4 lg:mx-auto lg:pr-12">
+                    <div className="flex items-center justify-between gap-4 md:gap-3 lg:gap-6 w-full h-auto border border-[#3D0C1161] bg-[#170A0B5e] mr-[15px] px-[14px] md:px-[16px] lg:px-[20px] py-[10px] rounded-full text-gray-200 text-sm md:text-sm lg:text-base whitespace-nowrap">
                         <a href="#about" className="cursor-pointer">
                             About me
                         </a>

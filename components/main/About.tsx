@@ -9,7 +9,7 @@ const About = () => {
     return (
         <section
             id="about"
-            className="flex flex-col md:flex-row relative items-center justify-center min-h-screen w-full h-full"
+            className="flex flex-col relative items-center justify-center min-h-screen w-full h-full"
         >
             <div className="md:absolute w-auto h-auto md:top-[80px] z-[5]">
                 <InView triggerOnce={false}>
@@ -31,7 +31,7 @@ const About = () => {
                 </InView>
             </div>
 
-            <div className="flex flex-col items-center justify-start relative md:mt-[90px] lg:mt-12 z-[20] w-auto h-auto">
+            <div className="flex flex-col items-center justify-start relative mt-4 md:mt-16 lg:mt-12 z-[20] w-auto h-auto">
                 <InView triggerOnce={false}>
                     {({ inView, ref }) => (
                         <motion.div

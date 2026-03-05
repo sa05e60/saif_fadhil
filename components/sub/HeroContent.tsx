@@ -19,10 +19,10 @@ const HeroContent = () => {
                     ref={ref}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
-                    className="relative flex md:flex-row flex-col-reverse items-center justify-center gap-6 md:gap-0 md:px-20 px-5 mt-24 md:mt-40 w-full z-20"
+                    className="relative flex md:flex-row flex-col-reverse items-center justify-center gap-6 md:gap-4 md:px-8 lg:px-20 px-5 mt-24 md:mt-32 lg:mt-40 w-full z-20"
                 >
                     <div className="h-full w-full md:w-3/6 flex flex-col gap-5 justify-center text-start">
-                        <div className="hidden md:flex flex-row items-center md:gap-5 gap-1">
+                        <div className="hidden md:flex flex-row flex-wrap items-center md:gap-2 lg:gap-5 gap-1">
                             <InView triggerOnce={false}>
                                 {({ inView, ref }) => (
                                     <motion.div
@@ -81,7 +81,7 @@ const HeroContent = () => {
                                     initial="hidden"
                                     animate={inView ? "visible" : "hidden"}
                                     variants={slideInFromLeft(0.5)}
-                                    className="flex flex-col gap-6 mt-6 text-3xl sm:text-4xl md:text-5xl font-bold text-white max-w-[600px] w-auto h-auto z-20"
+                                    className="flex flex-col gap-6 mt-6 text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-white max-w-[600px] w-auto h-auto z-20"
                                 >
                                     <span>
                                         Developer by
@@ -146,14 +146,14 @@ const HeroContent = () => {
                                 initial="hidden"
                                 animate={inView ? "visible" : "hidden"}
                                 variants={slideInFromRight(0.8)}
-                                className="w-full md:w-3/6 h-full flex justify-center items-center z-40"
+                                    className="w-full md:w-2/5 lg:w-3/6 h-full flex justify-center items-center z-40"
                             >
                                 <Image
                                     src="/mainIconsdark.svg"
                                     alt="work icons"
                                     height={650}
                                     width={650}
-                                    className="w-full max-w-[280px] sm:max-w-[380px] md:max-w-[500px] lg:max-w-[650px] h-auto"
+                                    className="w-full max-w-[280px] sm:max-w-[380px] md:max-w-[360px] lg:max-w-[650px] h-auto"
                                 />
                             </motion.div>
                         )}
