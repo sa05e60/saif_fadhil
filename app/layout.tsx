@@ -4,6 +4,7 @@ import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Providers from "@/components/Providers";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
@@ -30,6 +31,7 @@ export default function RootLayout({
                     <Navbar />
                     {children}
                 </Providers>
+                <Analytics />
             </body>
         </html>
     );
